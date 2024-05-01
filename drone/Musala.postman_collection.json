@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "3ce67f8d-bd6c-4b51-9611-5e174751dde5",
+		"name": "Musala",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25777265"
+	},
+	"item": [
+		{
+			"name": "add-medication-with-image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Eduardo/Pictures/addres-arianna.JPG"
+						},
+						{
+							"key": "name",
+							"value": "nNCjWFk0r67X",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "2.4",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "S05M992T1SXL6FWQMS7B9W0DJBE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/drones/7/add-medication-with-image",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"drones",
+						"7",
+						"add-medication-with-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register-drone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"serialNumber\": \"XM3HL0GQTJ7Z132\",\r\n  \"model\": \"Lightweight\",\r\n  \"weight\": 500,\r\n  \"batteryCapacity\": \"23%\",\r\n  \"state\": \"IDLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/drones/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"drones",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "load-medications",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n    \"name\": \"edu_27-ex\",\r\n    \"weight\": 2.4,\r\n    \"code\": \"VYBQCC9KDIKBW8XSR3WQEN6M2MTNYKLB8_\"\r\n  },\r\n  {\r\n    \"name\": \"caj_90-ex\",\r\n    \"weight\": 0.2,\r\n    \"code\": \"VYBQCC9KDIKBW8XSR3WQEN6M2MTNYKLB8_\"\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/drones/7/medications",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"drones",
+						"7",
+						"medications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medications-loaded-by-drone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/drones/7/medications",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"drones",
+						"7",
+						"medications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "drones-available-for-charging",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/drones/available",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"drones",
+						"available"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "battery-level-by-drone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/drones/7/battery",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"drones",
+						"7",
+						"battery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "status-to-loading",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/drones/6/changeStateToLoading",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"drones",
+						"6",
+						"changeStateToLoading"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all-log-records-stored",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/drones/getLogs",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"drones",
+						"getLogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log-records-stored-by-serialNumber",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/drones/DRONE004/getLogsBySerialNumber",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"drones",
+						"DRONE004",
+						"getLogsBySerialNumber"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
